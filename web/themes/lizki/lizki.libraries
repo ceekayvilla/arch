@@ -1,0 +1,9 @@
+global:
+  version: 1.0
+  js:
+    js/general-functions.js: { defer: true}
+  css: 
+    theme:
+      css/style.css: {weight: 1}
+  dependencies:
+    - core/jquery

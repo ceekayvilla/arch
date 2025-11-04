@@ -1,0 +1,17 @@
+name: 'Lizki'
+type: theme
+description: 'A custom theme for Lizki'
+core_version_requirement: ^10 || ^11
+base theme: false
+
+libraries:
+    - lizki/global-styling
+
+regions:
+  navbar: Navbar
+  header: Header
+  breadcrumb: Breadcrumb
+  messages: 'System messages'
+  content: Content
+  upper_footer: 'Upper Footer'
+  lower_footer: 'Lower Footer'

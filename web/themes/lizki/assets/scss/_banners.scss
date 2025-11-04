@@ -1,0 +1,365 @@
+/* -------------------------------------------
+
+banner
+
+------------------------------------------- */
+
+.mil-banner > .container, .mil-banner > .container > .row {
+    height: 100%;
+}
+
+.mil-banner {
+    height: 100vh;
+
+    & .mil-banner-text-frame {
+        height: calc(100% - 150px);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 150px;
+        z-index: 1;
+
+        & .mil-banner-text {
+            margin-bottom: 90px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    & .mil-banner-image-frame {
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+    }
+
+    //banner 1
+
+    &.mil-banner-1 {
+        & .mil-banner-image-frame {
+            float: right;
+            width: calc(100% + 330px);
+
+            &:before {
+                content: '';
+                width: 31%;
+                height: 40%;
+                background-color: $c2-4;
+                display: block;
+                position: absolute;
+                z-index: 2;
+            }
+
+            &:after {
+                content: '';
+                width: 30px;
+                height: 101%;
+                background-color: $c2-4;
+                display: block;
+                position: absolute;
+                left: 31%;
+                z-index: 2;
+            }
+        }
+    }
+
+    //banner 2
+
+    &.mil-banner-2 {
+        & .mil-banner-image-frame {
+            float: right;
+            overflow: visible;
+            width: 170%;
+
+            & img {
+                width: 123%;
+            }
+        }
+    }
+
+    //banner 3
+
+    &.mil-banner-3 {
+
+        & .mil-bg-pad {
+            position: absolute;
+            right: 0;
+            width: 200%;
+            height: 100%;
+        }
+
+        & .mil-banner-image-frame {
+            float: right;
+            overflow: visible;
+            width: 130%;
+
+            & img {
+                width: 100%;
+            }
+
+            & .mil-bannet-content-items {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                height: 100%;
+                padding-right: 100px;
+                right: 0;
+                padding-left: 50%;
+            }
+        }
+    }
+
+    //banner 4
+
+    &.mil-banner-4 {
+        & .mil-banner-image-frame {
+            float: right;
+            overflow: visible;
+            width: 130%;
+
+            & img {
+                width: 100%;
+            }
+
+            & .mil-bannet-content-items {
+                padding-top: 55%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                height: 100%;
+            }
+        }
+    }
+
+    //banner 5
+
+    &.mil-banner-5 {
+        background-size: cover;
+        background-position: left;
+    }
+
+    //banner 6
+
+    &.mil-banner-6 {
+        position: relative;
+        margin-bottom: 200px;
+
+        & .mil-banner-text-frame {
+            position: static;
+            background-color: $c2-1;
+            height: 100vh;
+            top: 0;
+            padding: 100px;
+
+            & .mil-banner-text {
+                margin-bottom: 0;
+                margin-top: 90px;
+            }
+        }
+
+        & .mil-image-position-1 {
+            position: absolute;
+            top: 40%;
+            left: 5%;
+        }
+
+        & .mil-image-position-2 {
+            position: absolute;
+            bottom: -200px;
+            right: 5%;
+        }
+
+        & .mil-banner-fly-image {
+            position: relative;
+            overflow: hidden;
+            width: 35vw;
+            padding-bottom: 65%;
+
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    //media queries
+
+    @media (max-width: 1400px) {
+
+        //banner 6
+        &.mil-banner-6 {
+            background-color: $c2-1;
+            margin-bottom: 0;
+
+            & .mil-image-position-1 {
+                top: 20%;
+                left: 0;
+            }
+
+            & .mil-image-position-2 {
+                right: 0;
+                bottom: 100px;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        height: auto;
+
+        & .mil-banner-text-frame {
+            height: 100%;
+            top: 0;
+            padding: 200px 0 100px;
+
+            & .mil-banner-text {
+                margin: 0;
+            }
+        }
+
+        //banner 1
+        &.mil-banner-1 {
+            & .mil-banner-image-frame {
+                width: 100%;
+                height: 60vh;
+
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        //banner 2
+        &.mil-banner-2 {
+            & .mil-suptitle {
+                color: $c2-1;
+            }
+
+            & .mil-banner-image-frame {
+                width: 100%;
+                height: 60vh;
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+
+        //banner 3
+        &.mil-banner-3 {
+            & .mil-bg-pad {
+                display: none;
+            }
+
+            & .mil-banner-image-frame {
+                height: auto;
+                width: 100%;
+                background-color: $c2-1;
+
+                & img {
+                    width: 100%;
+                    opacity: .3;
+                }
+
+                & .mil-bannet-content-items {
+                    padding: 60px;
+                }
+            }
+        }
+
+        //banner 4
+        &.mil-banner-4 {
+            & .mil-banner-image-frame {
+                width: 100%;
+                height: auto;
+
+                & .mil-bannet-content-items {
+                    padding: 0;
+                }
+            }
+        }
+
+        //banner 5
+        &.mil-banner-5 {
+            height: 100vh;
+
+            & .mil-banner-text-frame {
+                height: 100vh;
+            }
+
+            & .mil-banner-image-frame {
+                width: 100%;
+                height: 100vh;
+            }
+        }
+
+        //banner 6
+        &.mil-banner-6 {
+            background-color: $c2-1;
+            height: 100vh;
+
+            & .mil-image-position-1,
+            & .mil-image-position-2 {
+                display: none;
+            }
+
+            & .mil-banner-text-frame {
+                height: 100vh;
+                top: 0;
+                padding: 200px 0 100px;
+
+                & .mil-banner-text {
+                    margin: 0;
+                }
+            }
+
+            & .mil-banner-image-frame {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+.mil-banner-inner-page {
+    background-size: cover;
+    background-position: left;
+    height: 650px;
+    padding-top: 150px;
+    background-position: 0 150px;
+
+    & .mil-overlay {
+        background-color: rgba($c2-1, .6);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    @media (max-width: 1200px) {
+        padding-top: 100px;
+        background-position: 0 100px;
+    }
+}
