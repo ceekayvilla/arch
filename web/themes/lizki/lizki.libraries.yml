@@ -1,7 +1,13 @@
 global:
   version: 1.0
   js:
-    js/general-functions.js: { defer: true}
+    assets/js/plugins/swiper.min.js: {minified: true, async: true, defer: true}
+    assets/js/plugins/gsap.min.js: {minified: true, async: true, defer: true}
+    assets/js/plugins/ScrollSmoother.min.js: {minified: true, async: true, defer: true}
+    assets/js/plugins/ScrollTrigger.min.js: {minified: true, async: true, defer: true}
+    assets/js/plugins/ScrollTo.min.js: {minified: true, async: true, defer: true}
+    assets/js/plugins/magnific-popup.js: {minified: true, async: true, defer: true}
+    assets/js/main.js: { defer: true}
   css: 
     theme:
       assets/css/plugins/bootstrap.grid.css: {weight: 1}
