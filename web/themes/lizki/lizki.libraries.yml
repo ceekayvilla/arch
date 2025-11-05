@@ -4,6 +4,10 @@ global:
     js/general-functions.js: { defer: true}
   css: 
     theme:
-      css/style.css: {weight: 1}
+      assets/css/plugins/bootstrap.grid.css: {weight: 1}
+      assets/css/plugins/swiper.min.css: {weight: 1}
+      assets/fonts/css/font-awesome.min.css: {weight: 1}
+      assets/css/plugins/magnific-popup.css: {weight: 1}
+      assets/css/style.css: {weight: 1}
   dependencies:
     - core/jquery
