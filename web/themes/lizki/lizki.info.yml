@@ -9,9 +9,5 @@ libraries:
 
 regions:
   navbar: Navbar
-  header: Header
-  breadcrumb: Breadcrumb
-  messages: 'System messages'
   content: Content
-  upper_footer: 'Upper Footer'
-  lower_footer: 'Lower Footer'
+  footer: 'Footer'
