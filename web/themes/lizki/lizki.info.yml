@@ -5,7 +5,7 @@ core_version_requirement: ^10 || ^11
 base theme: false
 
 libraries:
-    - lizki/global-styling
+    - lizki/global
 
 regions:
   navbar: Navbar
