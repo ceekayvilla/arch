@@ -1,0 +1,27 @@
+{% set title = paragraph.field_title.value %}
+{% set sub_title = paragraph.field_sub_title.value %}
+{# {% set body_text = paragraph.field_formatted_text.value %} #}
+{% 
+  set body_text = {
+    '#type':   'processed_text',
+    '#text':    paragraph.field_formatted_text.value,
+    '#format':  paragraph.field_formatted_text.format,
+  }
+%}
+{% set link = paragraph.field_link.value %}
+ {% block paragraph %}
+    {% block content %}
+    {% if sub_title %}
+      <div class="mil-suptitle mil-sm mil-accent mil-mb-30 mil-up">
+        {{ sub_title }}
+      </div>
+    {% endif %}
+    {% if title %}
+      <h2 class="mil-mb-30 mil-up">
+        {{ title }}
+      </h2>
+    {% endif %}
+    {{ body_text }}
+      {# {{content}} #}
+    {% endblock %}
+ {% endblock paragraph %}
