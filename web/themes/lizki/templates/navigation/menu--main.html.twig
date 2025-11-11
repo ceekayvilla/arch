@@ -31,20 +31,20 @@
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
-    {% if menu_level == 0 %}
-      <ul{{ attributes }} {{attributes.addClass('mil-navigation') }}>
+    {# {% if menu_level == 0 %}
+      <ul{{ attributes }}>
     {% else %}
       <ul>
-    {% endif %}
+    {% endif %} #}
     {% for item in items %}
       {% if item.is_expanded %}
         <li{{ item.attributes }} {{attributes.addClass('mil-has-children')}}>
-          {{ link(item.title, item.url, { 'aria-label':item.title, 'role':'button', 'data-bs-toggle':'dropdown','aria-expanded':'false' }) }}
+          {{ link(item.title, item.url, { 'aria-label':item.title }) }}
           {% if item.below %}
             <ul>
             {% for item_below in item.below %}
                 <li>
-                  {{ link(item_below.title, item_below.url, {'class':['dropdown-item']}) }}
+                  {{ link(item_below.title, item_below.url) }}
                 </li>
             {% endfor %}
             </ul>
