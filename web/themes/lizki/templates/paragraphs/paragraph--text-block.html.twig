@@ -1,6 +1,5 @@
 {% set title = paragraph.field_title.value %}
 {% set sub_title = paragraph.field_sub_title.value %}
-{# {% set body_text = paragraph.field_formatted_text.value %} #}
 {% 
   set body_text = {
     '#type':   'processed_text',
@@ -22,6 +21,20 @@
       </h2>
     {% endif %}
     {{ body_text }}
-      {# {{content}} #}
+
+    {% if paragraph.field_link|length > 0 %}
+      {% for item in link %}
+        {% set raw_link_url = item["uri"] %}
+          {% if raw_link_url.isRouted %}
+            {% set full_url = path(raw_link_url.routeName, raw_link_url.routeParameters) %}
+          {% else %}
+            {% set full_url = raw_link_url.toString() %}
+          {% endif %}
+        <div class="mil-up mt-md-5">
+          <a href="{{ full_url }}" class="mil-btn mil-btn-sm">{{item["title"]}}</a>
+        </div>
+      {% endfor %}
+    {% endif %}
+
     {% endblock %}
  {% endblock paragraph %}
