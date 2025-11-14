@@ -1,6 +1,6 @@
-{% set align_content = 'justify-content-' ~ paragraph.field_content_alignment.value %}
+{% set align_content = paragraph.field_content_alignment.value ? ' justify-content-' ~ paragraph.field_content_alignment.value : '' %}
 {% block paragraph %}
-  <div class="row {{align_content}}">
+  <div class="row{{align_content}}">
      {% block content %}
       {{content}}
      {% endblock %}
