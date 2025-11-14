@@ -20,7 +20,10 @@
         {{ title }}
       </h2>
     {% endif %}
-    {{ body_text }}
+
+    {% if paragraph.field_formatted_text.value %}
+     {{ body_text }}
+    {% endif %}
 
     {% if paragraph.field_link|length > 0 %}
       {% for item in link %}
