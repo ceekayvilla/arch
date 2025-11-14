@@ -1,0 +1,8 @@
+{% set align_content = 'justify-content-' ~ paragraph.field_content_alignment.value %}
+{% block paragraph %}
+  <div class="row {{align_content}}">
+     {% block content %}
+      {{content}}
+     {% endblock %}
+  </div>
+{% endblock paragraph %}
