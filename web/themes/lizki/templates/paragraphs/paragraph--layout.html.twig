@@ -45,7 +45,7 @@
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
     'mil-p-' ~ paragraph.field_padding.value, 
-    paragraph.field_background_colour.value=='f8f8f8' ? 'mil-bg-soft':'',
+    paragraph.field_background_colour.value,
 
   ]
 %}
