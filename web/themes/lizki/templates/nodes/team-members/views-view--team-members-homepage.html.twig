@@ -1,0 +1,9 @@
+{% if rows %}
+  <div class="row pt-md-5">
+   {{rows}}
+  </div>
+{% elseif empty -%}
+  <div class="green-wrapper">
+    {{empty}}
+  </div>
+{% endif %}
