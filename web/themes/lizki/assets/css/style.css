@@ -3295,3 +3295,14 @@ footer .mil-footer-bottom {
             flex-direction: column;
   }
 }
+
+.mil-bg-accent,
+.mil-bg-accent h1, 
+.mil-bg-accent h2, 
+.mil-bg-accent h3, 
+.mil-bg-accent h4, 
+.mil-bg-accent h5, 
+.mil-bg-accent h6,
+.mil-bg-accent .mil-suptitle.mil-accent {
+  color: #ffffff;
+}
