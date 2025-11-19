@@ -45,7 +45,7 @@
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
     'col-lg-' ~ paragraph.field_size.value,
-    'text-align-' ~ paragraph.field_content_alignment.value
+    paragraph.field_content_alignment.value ? 'text-align-' ~ paragraph.field_content_alignment.value : ''
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
