@@ -3306,3 +3306,7 @@ footer .mil-footer-bottom {
 .mil-bg-accent .mil-suptitle.mil-accent {
   color: #ffffff;
 }
+
+.mil-image-simple img.img-fluid {
+  height: auto;
+}
