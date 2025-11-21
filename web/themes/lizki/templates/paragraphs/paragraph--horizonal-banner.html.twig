@@ -1,0 +1,23 @@
+{% set title = paragraph.field_title.value %}
+{% set image_path = paragraph.field_banner_image.entity.field_media_image.entity.uri.value %}
+<div class="mil-banner-inner-page" style="background: url({{ file_url(image_path) }}) no-repeat">
+    <div class="mil-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="mil-banner-text-frame">
+                        <div class="mil-banner-text">
+                            {{ drupal_breadcrumb() }}
+                            <h1 class="mil-light">{{ title }}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  const header = document.querySelector('.mil-top-panel-frame'); 
+  header.classList.add('mil-light-panel');
+</script>
