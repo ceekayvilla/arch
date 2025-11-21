@@ -1,5 +1,6 @@
 {% set title = paragraph.field_title.value %}
 {% set sub_title = paragraph.field_sub_title.value %}
+{% set title_size = paragraph.field_title_size.value ? paragraph.field_title_size.value : 2 %}
 {% 
   set body_text = {
     '#type':   'processed_text',
@@ -16,9 +17,9 @@
       </div>
     {% endif %}
     {% if title %}
-      <h2 class="mil-mb-30 mil-up">
+      <{{'h'~title_size}} class="mil-mb-30 mil-up">
         {{ title }}
-      </h2>
+      </{{'h'~title_size}}>
     {% endif %}
 
     {% if paragraph.field_formatted_text.value %}

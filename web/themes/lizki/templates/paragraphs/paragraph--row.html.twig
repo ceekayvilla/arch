@@ -1,6 +1,11 @@
-{% set align_content = paragraph.field_content_alignment.value ? ' justify-content-' ~ paragraph.field_content_alignment.value : '' %}
+{% set align_content = paragraph.field_content_alignment.value ? 'justify-content-' ~ paragraph.field_content_alignment.value : 'justify-content-between' %}
+{% set classes = [
+  'mil-p-' ~ paragraph.field_padding.value, 
+  'row',
+  align_content
+]%}
 {% block paragraph %}
-  <div class="row{{align_content}}">
+  <div {{ attributes.addClass(classes) }}>
      {% block content %}
       {{content}}
      {% endblock %}

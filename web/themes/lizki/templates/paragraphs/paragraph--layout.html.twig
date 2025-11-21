@@ -44,13 +44,12 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    'mil-p-' ~ paragraph.field_padding.value, 
+    paragraph.field_padding.value ? 'mil-p-' ~ paragraph.field_padding.value: '', 
     paragraph.field_background_colour.value,
 
   ]
 %}
-{% set background_colour = paragraph.field_background_colour.value %}
-{% set padding = paragraph.padding.value %}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     <div class="container">
