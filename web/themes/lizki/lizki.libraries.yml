@@ -17,3 +17,8 @@ global:
       assets/css/style.css: {weight: 1}
   dependencies:
     - core/jquery
+
+horizontal-banner-html-updates:
+  version: 1.0
+  js:
+    assets/js/update-menu-class.js: {async: true, defer: true}
