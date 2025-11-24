@@ -1,0 +1,13 @@
+{%
+  set classes = [
+    'mil-accordion'
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% block paragraph %}
+    {% block content %}
+      {{content}}
+    {% endblock %}
+  {% endblock paragraph %}
+</div>
