@@ -1,0 +1,44 @@
+{% set title = paragraph.field_title.value %}
+{% set sub_title = paragraph.field_sub_title.value %}
+{% set title_size = paragraph.field_title_size.value ? paragraph.field_title_size.value : 2 %}
+{% 
+  set body_text = {
+    '#type':   'processed_text',
+    '#text':    paragraph.field_formatted_text.value,
+    '#format':  paragraph.field_formatted_text.format,
+  }
+%}
+{% set link = paragraph.field_link.value %}
+ {% block paragraph %}
+    {% block content %}
+    {% if sub_title %}
+      <div class="mil-suptitle mil-sm mil-accent mil-mb-30 mil-up">
+        {{ sub_title }}
+      </div>
+    {% endif %}
+    {% if title %}
+      <{{'h'~title_size}} class="mil-mb-30 mil-up">
+        {{ title }}
+      </{{'h'~title_size}}>
+    {% endif %}
+
+    {% if paragraph.field_formatted_text.value %}
+     {{ body_text }}
+    {% endif %}
+
+    {% if paragraph.field_link|length > 0 %}
+      {% for item in link %}
+        {% set raw_link_url = item["uri"] %}
+          {% if raw_link_url.isRouted %}
+            {% set full_url = path(raw_link_url.routeName, raw_link_url.routeParameters) %}
+          {% else %}
+            {% set full_url = raw_link_url.toString() %}
+          {% endif %}
+        <div class="mil-up mt-md-5">
+          <a href="{{ full_url }}" class="mil-btn mil-btn-sm">{{item["title"]}}</a>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% endblock %}
+ {% endblock paragraph %}

@@ -1,0 +1,20 @@
+<div class="swiper-container mil-projects-1">
+  <div class="swiper-wrapper">
+    {% if rows %}
+      {{rows}}
+    {% elseif empty -%}
+      <div class="green-wrapper b-radius-10 mb-46">
+        {{empty}}
+      </div>
+    {% endif %}
+  </div>
+  <div class="mil-slider-nav mil-position-1 mil-up">
+    <div class="mil-nav-btn mil-prev">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+    <div class="mil-nav-btn mil-next">
+        <i class="fas fa-arrow-right"></i>
+    </div>
+  </div>
+</div>
+

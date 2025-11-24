@@ -1,0 +1,20 @@
+{% set accordion_title = paragraph.field_title.value %}
+{% set accordion_content = paragraph.field_formatted_text %}
+ {% set formatted_body = {
+  '#type':   'processed_text',
+  '#text':    accordion_content.value,
+  '#format':  accordion_content.format,
+}
+%}
+
+<div class="mil-accordion-group mil-up">
+    <div class="mil-accordion-menu">
+        <h5 class="mil-light">{{ accordion_title }}</h5>
+        <div class="mil-accordion-icon"><i class="fas fa-arrow-up"></i></div>
+    </div>
+    <div class="mil-accordion-content">
+        <div class="mil-soft">
+          {{ formatted_body }}
+        </div>
+    </div>
+</div>

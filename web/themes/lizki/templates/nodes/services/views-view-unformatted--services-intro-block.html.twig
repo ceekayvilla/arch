@@ -1,0 +1,11 @@
+{% for row in rows %}
+  {% set title    =  view.style_plugin.getField(loop.index0, 'title') %}
+  {% set summary    = view.style_plugin.getField(loop.index0, 'body') %}
+
+  <li class="mil-mb-50 mil-up" data-count="01">
+      <div class="mil-service-item">
+          <h4 class="mil-light mil-mb-15">{{ title }}</h4>
+          <p>{{ summary }}</p>
+      </div>
+  </li>
+{% endfor %}

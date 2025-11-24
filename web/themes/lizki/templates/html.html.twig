@@ -21,7 +21,8 @@
   </head>
 
   <body id="non-iframe-body" {{ attributes.addClass(body_classes) }}>
-    <div class="dialog-off-canvas-main-canvas">
+    <div class="dialog-off-canvas-main-canvas mil-wrapper" id="smooth-wrapper">
+      <a id="mil-btt" class="mil-back-to-top"><i class="fas fa-arrow-up"></i></a>
         {{ page_top }}
         {{ page }}
         {{ page_bottom }}

@@ -3295,3 +3295,43 @@ footer .mil-footer-bottom {
             flex-direction: column;
   }
 }
+
+.mil-bg-accent,
+.mil-bg-accent h1, 
+.mil-bg-accent h2, 
+.mil-bg-accent h3, 
+.mil-bg-accent h4, 
+.mil-bg-accent h5, 
+.mil-bg-accent h6,
+.mil-bg-accent .mil-suptitle.mil-accent,
+.mil-bg-dark h1,
+.mil-bg-dark h2,
+.mil-bg-dark h3,
+.mil-bg-dark h4,
+.mil-bg-dark h5,
+.mil-bg-dark h6 {
+  color: #ffffff;
+}
+
+.mil-bg-accent .mil-btn,
+.mil-bg-dark .mil-btn {
+    border:2px solid #FFFFFF;
+    color: #FFFFFF;
+    background-color: transparent;
+    font-size: 1rem;
+}
+.mil-bg-dark  .mil-suptitle.mil-accent {
+  color: #898D96;
+}
+.mil-dark .mil-breadcrumbs a {
+  color: #212121
+}
+
+.mil-image-simple img.img-fluid {
+  height: auto;
+}
+
+.mil-p-100-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}

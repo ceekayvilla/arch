@@ -1,0 +1,25 @@
+{% set name = node.label %}
+{% set position = node.field_plain_text.value %}
+<div class="mil-p-200-100">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+
+      <div class="col-lg-6 mil-mb-100">
+        <div class="mil-image-simple mil-square mil-up">
+          <img loading="lazy" src="{{content.field_image}}" alt="{{name ~', '~ position}}" data-value-1="1" data-value-2="1.1" class="mil-scale-img img-fluid">
+        </div>
+      </div>
+
+      <div class="col-lg-5 mil-mb-100">
+        <div class="mil-dark">
+          {{ drupal_breadcrumb() }}
+        </div>
+        <h3 class="mil-mb-30 mil-up">
+          {{name}}
+        </h3>
+        <h5 class="mil-mb-30 mil-up mil-tab mil-active-tab">{{position}}</h5>
+        {{content.body}}
+      </div>
+    </div>
+  </div>
+</div>

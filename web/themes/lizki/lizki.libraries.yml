@@ -1,9 +1,24 @@
 global:
   version: 1.0
   js:
-    js/general-functions.js: { defer: true}
+    assets/js/plugins/swiper.min.js: {minified: true, async: true, defer: true}
+    assets/js/plugins/gsap.min.js: {minified: true, async: true, defer: true}
+    assets/js/plugins/ScrollSmoother.min.js: {minified: true, async: true, defer: true}
+    assets/js/plugins/ScrollTrigger.min.js: {minified: true, async: true, defer: true}
+    assets/js/plugins/ScrollTo.min.js: {minified: true, async: true, defer: true}
+    assets/js/plugins/magnific-popup.js: {minified: true, async: true, defer: true}
+    assets/js/main.js: { defer: true}
   css: 
     theme:
-      css/style.css: {weight: 1}
+      assets/css/plugins/bootstrap-grid.css: {weight: 1}
+      assets/css/plugins/swiper.min.css: {weight: 1}
+      assets/fonts/css/font-awesome.min.css: {weight: 1}
+      assets/css/plugins/magnific-popup.css: {weight: 1}
+      assets/css/style.css: {weight: 1}
   dependencies:
     - core/jquery
+
+horizontal-banner-html-updates:
+  version: 1.0
+  js:
+    assets/js/update-menu-class.js: {async: true, defer: true}
