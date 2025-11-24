@@ -1,6 +1,6 @@
 {% set title = paragraph.field_title.value %}
 {% set image_path = paragraph.field_banner_image.entity.field_media_image.entity.uri.value %}
-<div class="mil-banner-inner-page" style="background: url({{ file_url(image_path) }}) no-repeat">
+<div class="mil-banner-inner-page" style="background-image: url({{ file_url(image_path) }})">
     <div class="mil-overlay">
         <div class="container">
             <div class="row">
