@@ -1,0 +1,13 @@
+{% set block_size = content.field_block_size[0]["#markup"] %}
+{% set classes = [
+  'mil-mb-100',
+  'col-xl-' ~ block_size
+  
+]%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="mil-footer-logo mil-up">
+    {% block content %}
+      {{ content.body }}
+    {% endblock %}
+  </div>
+</div>

@@ -1,0 +1,18 @@
+{% set block_size = content.field_block_size[0]["#markup"] %}
+{% set title_size = content.field_title_size[0]["#markup"] %}
+{% set block_title = content.field_title[0]["#context"].value %}
+{% set classes = [
+  'mil-mb-100',
+  'col-xl-' ~ block_size
+  
+]%}
+<div{{ attributes.addClass(classes) }}>
+  {% block content %}
+    {% if block_title %}
+      <{{ 'h' ~ title_size }} class="mil-soft mil-mb-30 mil-up">
+        {{block_title}}
+      </{{'h'~title_size}}>
+    {% endif %}
+    {{ content.body }}
+  {% endblock %}
+</div>
