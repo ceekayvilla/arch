@@ -1,7 +1,11 @@
 {% if rows %}
-  <div class="row justify-content-between">
-    {{rows}}
-  </div>
+  {% for pair in rows|batch(2) %}
+      <div class="row justify-content-between">
+          {% for project in pair %}
+            {{ project}} 
+          {% endfor %}
+      </div>
+  {% endfor %}
 {% elseif empty -%}
   <div class="green-wrapper">
     {{empty}}
