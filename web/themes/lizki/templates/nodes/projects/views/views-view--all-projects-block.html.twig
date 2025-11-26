@@ -1,0 +1,9 @@
+{% if rows %}
+  <div class="row justify-content-between">
+    {{rows}}
+  </div>
+{% elseif empty -%}
+  <div class="green-wrapper">
+    {{empty}}
+  </div>
+{% endif %}
