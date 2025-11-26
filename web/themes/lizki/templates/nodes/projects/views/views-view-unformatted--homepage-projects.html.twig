@@ -2,6 +2,7 @@
   {% set title =  view.style_plugin.getField(loop.index0, 'title') %}
   {% set image = view.style_plugin.getField(loop.index0, 'field_image') %}
   {% set url = view.style_plugin.getField(loop.index0, 'view_node') %}
+  {% set summary    = view.style_plugin.getField(loop.index0, 'body') %}
 
   <div class="swiper-slide" data-swiper-parallax-scale="0.15">
       <a href="{{url}}" class="mil-project-card mil-land">
@@ -11,8 +12,8 @@
               </div>
           </div>
           <div class="mil-descr mil-p-0" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
-              <h4 class="mil-mb-10">{{title}}</h4>
-              <p class="mil-mb-20">Business Inspiration</p>
+              <h4 class="mil-mb-10">{{ title }}</h4>
+              <p class="mil-mb-20">{{ summary }}</p>
               <span class="mil-btn mil-btn-sm">View Project</span>
           </div>
       </a>
